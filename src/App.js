@@ -46,6 +46,7 @@ const BestsellersStackScreen = ({ navigation }) => (
 			component={BestsellersScreen}
 			options={{
 				title: "Best Sellers",
+				headerLeft: () => <MaterialCommunityIcons name="menu" size={25} color="white" onPress={() => navigation.openDrawer()} />,
 			}}
 		/>
 	</BestsellerStack.Navigator>
@@ -58,7 +59,7 @@ const SearchBooksStackScreen = ({ navigation }) => (
 			component={SearchBooksScreen}
 			options={{
 				title: "Search Books",
-				headerLeft,
+				headerLeft: () => <MaterialCommunityIcons name="menu" size={25} color="white" onPress={() => navigation.openDrawer()} />,
 			}}
 		/>
 	</SearchBooksStack.Navigator>
@@ -71,7 +72,7 @@ const MissionStackScreen = ({ navigation }) => (
 			component={MissionScreen}
 			options={{
 				title: "Mission Screen",
-				headerLeft,
+				headerLeft: () => <MaterialCommunityIcons name="menu" size={25} color="white" onPress={() => navigation.openDrawer()} />,
 			}}
 		/>
 	</MissionStack.Navigator>
@@ -84,7 +85,7 @@ const BookstoresStackScreen = ({ navigation }) => (
 			component={BookstoresScreen}
 			options={{
 				title: "Bookstores Screen",
-				headerLeft,
+				headerLeft: () => <MaterialCommunityIcons name="menu" size={25} color="white" onPress={() => navigation.openDrawer()} />,
 			}}
 		/>
 	</BookstoresStack.Navigator>
@@ -97,7 +98,7 @@ const AboutUsStackScreen = ({ navigation }) => (
 			component={AboutUsScreen}
 			options={{
 				title: "About Us Screen",
-				headerLeft,
+				headerLeft: () => <MaterialCommunityIcons name="menu" size={25} color="white" onPress={() => navigation.openDrawer()} />,
 			}}
 		/>
 	</AboutUsStack.Navigator>
