@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Button, StyleSheet, Text, TouchableOpacity, View, ImageBackground } from "react-native";
+import { Button, StyleSheet, Text, Image, ScrollView, View, ImageBackground } from "react-native";
 import { Context } from "../../store";
 
 const LandingScreen = ({ navigation }) => {
@@ -12,32 +12,17 @@ const LandingScreen = ({ navigation }) => {
 			<ImageBackground
 				source={{
 					uri:
-						"https://images.unsplash.com/photo-1547104442-044448b73426?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80",
+						"https://images.unsplash.com/photo-1600172454284-934feca24ccd?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80",
 				}}
 				style={styles.image}
 			/>
-			<Text>Landing Screen</Text>
-			<Text> {JSON.stringify(state)}</Text>
-			<TouchableOpacity
-				// style={{
-				//     height: 50,
-				//     width: 220,
-				//     marginTop: 10,
-				//     marginBottom: 10,
-				//     backgroundColor: '#ff5733',
-				//     borderRadius: 30,
-				//     justifyContent: 'center',
-				//     alignItems: 'center'
-				// }}
-				onPress={onUserLogin}
-			>
+
+			<Text style={styles.title}>tsundoku</Text>
+			<Text style={styles.slogan}>books are here to stay</Text>
+			{/* <Text>{JSON.stringify(state)}</Text>
+			<TouchableOpacity onPress={onUserLogin}>
 				<Text style={{ color: "#fff", fontSize: 18 }}>User Login</Text>
-			</TouchableOpacity>
-			{/* <Button title="NYT Best Sellers" onPress={() => navigation.navigate("Best Sellers")} />
-			<Button title="Search" onPress={() => navigation.navigate("Search Books")} />
-			<Button title="Mission" onPress={() => navigation.navigate("Mission")} />
-			<Button title="About Us" onPress={() => navigation.navigate("About Us")} />
-			<Button title="Book Stores" onPress={() => navigation.navigate("Book Stores")} /> */}
+			</TouchableOpacity> */}
 		</View>
 	);
 };
@@ -54,6 +39,13 @@ const styles = StyleSheet.create({
 		height: "100%",
 		resizeMode: "cover",
 		position: "absolute",
+	},
+	title: {
+		fontSize: 60,
+		padding: 10,
+	},
+	slogan: {
+		fontSize: 25,
 	},
 });
 
