@@ -29,10 +29,10 @@ const Drawer = createDrawerNavigator();
 const LandingStackScreen = ({ navigation }) => (
 	<LandingStack.Navigator screenOptions={header}>
 		<LandingStack.Screen
-			name="Landing"
+			name="Home"
 			component={LandingScreen}
 			options={{
-				title: "Landing",
+				title: "Home",
 				headerLeft: () => <MaterialCommunityIcons name="menu" size={25} color="white" onPress={() => navigation.openDrawer()} />,
 			}}
 		/>
@@ -84,7 +84,7 @@ const BookstoresStackScreen = ({ navigation }) => (
 			name="Bookstores"
 			component={BookstoresScreen}
 			options={{
-				title: "Bookstores Screen",
+				title: "Bookstores",
 				headerLeft: () => <MaterialCommunityIcons name="menu" size={25} color="white" onPress={() => navigation.openDrawer()} />,
 			}}
 		/>
@@ -109,11 +109,11 @@ export default function App() {
 		<Provider>
 			<NavigationContainer>
 				<Drawer.Navigator initialRouteName="Landing">
-					<Drawer.Screen name="Landing" component={LandingStackScreen} />
-					<Drawer.Screen name="Best Sellers" component={BestsellersStackScreen} />
+					<Drawer.Screen name="Home" component={LandingStackScreen} />
+					<Drawer.Screen name="Bestsellers" component={BestsellersStackScreen} />
 					<Drawer.Screen name="Search Books" component={SearchBooksStackScreen} />
 					<Drawer.Screen name="Mission" component={MissionStackScreen} />
-					<Drawer.Screen name="Book Stores" component={BookstoresStackScreen} />
+					<Drawer.Screen name="Bookstores" component={BookstoresStackScreen} />
 					<Drawer.Screen name="About Us" component={AboutUsStackScreen} />
 				</Drawer.Navigator>
 			</NavigationContainer>
