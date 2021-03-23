@@ -1,13 +1,13 @@
-import React from 'react';
-import {Provider} from './store'
-import {NavigationContainer} from '@react-navigation/native'
-import {createStackNavigator} from '@react-navigation/stack'
-import LandingScreen from './screens/Landing/LandingScreen';
-import BestsellersScreen from './screens/Bestsellers/BestSellersScreen';
-import SearchBooksScreen from './screens/SearchBooks/SearchBooksScreen';
-import MissionScreen from './screens/Mission/MissionScreen';
-import BookstoresScreen from './screens/BookStores/BookStoresScreen';
-import AboutUsScreen from './screens/AboutUs/AboutUsScreen';
+import React from "react";
+import { Provider } from "./store";
+import { NavigationContainer } from "@react-navigation/native";
+import { createStackNavigator } from "@react-navigation/stack";
+import LandingScreen from "./screens/Landing/LandingScreen";
+import BestsellersScreen from "./screens/Bestsellers/BestSellersScreen";
+import SearchBooksScreen from "./screens/SearchBooks/SearchBooksScreen";
+import MissionScreen from "./screens/Mission/MissionScreen";
+import BookstoresScreen from "./screens/BookStores/BookStoresScreen";
+import AboutUsScreen from "./screens/AboutUs/AboutUsScreen";
 
 const RootStack = createStackNavigator();
 
