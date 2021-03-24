@@ -1,11 +1,26 @@
-import React, { useContext } from "react";
+import React, { useState, useContext } from "react";
 import { Button, StyleSheet, Text, Image, ScrollView, View, ImageBackground } from "react-native";
 import { Context } from "../../store";
+import * as Font from "expo-font";
+import AppLoading from "expo-app-loading";
 
 const LandingScreen = ({ navigation }) => {
 	const { state, onUserLogin, onUserLogout } = useContext(Context);
 
-	console.log(`${JSON.stringify(state)}`);
+	const [fontLoaded, setFontLoaded] = useState(false);
+
+	const loadFonts = () => {
+		return Font.loadAsync({
+			"jost-reg": require("../../../assets/fonts/Jost-Regular.ttf"),
+			"jost-bold": require("../../../assets/fonts/Jost-Bold.ttf"),
+			"jost-light": require("../../../assets/fonts/Jost-Light.ttf"),
+			"jost-thin": require("../../../assets/fonts/Jost-Thin.ttf"),
+		});
+	};
+
+	if (!fontLoaded) {
+		return <AppLoading startAsync={loadFonts} onFinish={() => setFontLoaded(true)} onError={(err) => console.log(err)} />;
+	}
 
 	return (
 		<View style={styles.container}>
@@ -43,9 +58,11 @@ const styles = StyleSheet.create({
 	title: {
 		fontSize: 60,
 		padding: 10,
+		fontFamily: "jost-bold",
 	},
 	slogan: {
 		fontSize: 25,
+		fontFamily: "jost-light",
 	},
 });
 
