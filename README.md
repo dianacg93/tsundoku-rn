@@ -60,7 +60,7 @@ Heading to the bookstore? Not sure what to buy? Pull up Tsundoku on your phone. 
 
 # Inspiration
 
-We approached this idea for our indivual appreciation to discover new books, and our lifelong desire to learn new things.
+We approached this idea for our individual appreciation to discover new books, and our lifelong desire to learn new things.
 
 <div>
 <img width="90%" src="https://i.imgur.com/u2MI4ye.png" alt="Gif of our app">
@@ -100,7 +100,7 @@ We learned the following:
 
 # Plans
 
-We are looking foward to many new opportunities in the near future, including:
+We are looking forward to many new opportunities in the near future, including:
 
 - Working on implementing on user authentication for registration.
 - Collaborating with book stores and libraries.
@@ -141,6 +141,9 @@ We are looking foward to many new opportunities in the near future, including:
 - Shafee Ahmed - [LinkedIn](https://www.linkedin.com/in/shafeelinks/)
 
 - Shan Siddiqui - [LinkedIn](https://www.linkedin.com/in/ssiddiqui007/)
+
+- Jahaziel Israel - [LinkedIn](https://www.linkedin.com/in/jahazielbenisrael/)
+
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
