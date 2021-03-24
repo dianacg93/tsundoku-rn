@@ -4,15 +4,27 @@ import axios from 'axios';
 import config from '../../../config'
 import quoteData from '../../../quoteData'
 import { ScrollView } from 'react-native-gesture-handler';
+import * as Font from 'expo-font';
+import AppLoading from 'expo-app-loading';
 
 const SearchBooksScreen = () => {
 
     const [searchBook, setSearchBook] = useState("");
     const [resultBooks, setResultBooks] = useState([]);
     const [isAdvanced, setIsAdvanced] = useState(false);
+    const [fontLoaded, setFontLoaded] = useState(false);
     const [quote, setQuote] = useState(quoteData[Math.floor(Math.random() * quoteData.length)])
 
     const BASE_URL = `${config.REACT_APP_GOOG_URL}key=${config.REACT_APP_GOOG_API_KEY}&q=${searchBook}`
+
+    const loadFonts = () => {
+        return Font.loadAsync({
+            "jost-reg" : require('../../../assets/fonts/Jost-Regular.ttf'),
+            "jost-bold": require('../../../assets/fonts/Jost-Bold.ttf'),
+            "jost-light": require('../../../assets/fonts/Jost-Light.ttf'),
+            "jost-thin": require('../../../assets/fonts/Jost-Thin.ttf'),
+        })
+    }
 
     useEffect(() => {
 		const interval = setInterval(() => {
@@ -34,6 +46,16 @@ const SearchBooksScreen = () => {
     const onPressChange = () => {
         fetchSearchBook();
         setSearchBook("")
+    }
+
+    if(!fontLoaded) {
+        return (
+            <AppLoading 
+                startAsync={loadFonts}
+                onFinish = {() => setFontLoaded(true)}
+                onError = {(err) => console.log(err)}
+            />
+        )
     }
 
     return (
@@ -80,9 +102,11 @@ const SearchBooksScreen = () => {
                     style={{padding:10}}
                     >
                         <Text 
-                        style={{fontSize:18, fontWeight:'500', alignSelf:'center'}}
+                        style={{fontSize:18, fontWeight:'500', alignSelf:'center', fontFamily:'jost-bold'}}
                         >"{quote.quote}"</Text>
-                        <Text >- {quote.author}</Text>
+                        <Text 
+                        style={{fontFamily:'jost-reg'}}
+                        >- {quote.author}</Text>
                     </View>
                 }
                 </View>
