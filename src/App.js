@@ -7,12 +7,12 @@ import { createDrawerNavigator } from "@react-navigation/drawer";
 
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 
-import LandingScreen from "./Screens/Landing/LandingScreen";
-import BestsellersScreen from "./Screens/Bestsellers/BestSellersScreen";
-import SearchBooksScreen from "./Screens/SearchBooks/SearchBooksScreen";
-import MissionScreen from "./Screens/Mission/MissionScreen";
-import BookstoresScreen from "./Screens/BookStores/BookStoresScreen";
-import AboutUsScreen from "./Screens/AboutUs/AboutUsScreen";
+import LandingScreen from "./screens/Landing/LandingScreen";
+import BestsellersScreen from "./screens/Bestsellers/BestSellersScreen";
+import SearchBooksScreen from "./screens/SearchBooks/SearchBooksScreen";
+import MissionScreen from "./screens/Mission/MissionScreen";
+import BookstoresScreen from "./screens/BookStores/BookStoresScreen";
+import AboutUsScreen from "./screens/AboutUs/AboutUsScreen";
 
 import { header } from "./StackStyles";
 

@@ -3,6 +3,7 @@ import {View, Text, TextInput, StyleSheet, Button, Image} from 'react-native';
 import axios from 'axios';
 import config from '../../../config'
 import quoteData from '../../../quoteData'
+import { ScrollView } from 'react-native-gesture-handler';
 
 const SearchBooksScreen = () => {
 
@@ -16,7 +17,7 @@ const SearchBooksScreen = () => {
     useEffect(() => {
 		const interval = setInterval(() => {
 			setQuote(quoteData[Math.floor(Math.random() * quoteData.length)]);
-		}, 6000);
+		}, 8000);
 
 		return () => clearInterval(interval);
 	}, [quote]);
@@ -32,60 +33,74 @@ const SearchBooksScreen = () => {
 
     const onPressChange = () => {
         fetchSearchBook();
+        setSearchBook("")
     }
 
     return (
-        <View style={style.container}>
-            <Text>Search for Books</Text>
-            <TextInput
-            style={{ height: 40, width: 100, borderColor: 'gray', borderWidth: 1 }}
-            onChangeText={text => setSearchBook(text)}
-            value={searchBook}
-            />
-            <Text onPress={() => setIsAdvanced(!isAdvanced)}>Advanced Search</Text>
-            {isAdvanced ? 
-            <TextInput
-            style={{ height: 40, width: 100, borderColor: 'gray', borderWidth: 1 }}
-            onChangeText={text => setSearchBook(text)}
-            value={searchBook}
-            placeholder="Advanced"
-            /> : 
-            ""
-            }
-            <Button 
-            title="Search"
-            onPress={onPressChange}
-             />
-            {resultBooks.length ? 
-                resultBooks.map(el => {
-                    return (
-                        <View key={el.id}>
-                            <Text>{el.volumeInfo.title}</Text>
-                            <Image 
-                            style={style.resultImgs}
-                            source={{uri: `${el.volumeInfo.imageLinks.thumbnail}`}}
-                            />
-                            <Text> by {el.volumeInfo.authors? el.volumeInfo.authors[0] : "unknown"}</Text>
-                        </View>
-                    )
-                }) 
-                : 
-                        <View>
-                            <Text>{quote.quote}</Text>
-                            <Text>{quote.author}</Text>
-                        </View>
-            }
-        </View>
+        <ScrollView>
+            <View style={style.container}>
+                <Text style={{fontSize:25, flex:1, alignSelf:'center', padding: 10, fontWeight:'600'}}>Search for Books</Text>
+                <View
+                style={{flex:2, flexDirection: 'row', alignItems: 'center'}}
+                >
+                    <TextInput
+                    style={{ height: 40, width: 100, borderColor: '#E5E7EB', borderRadius:15, borderWidth: 2 }}
+                    onChangeText={text => setSearchBook(text)}
+                    value={searchBook}
+                    />
+                    <Button 
+                    title="Search"
+                    onPress={onPressChange}
+                    />
+                </View>
+                <View 
+                style={{flex:1, alignItems:'center', padding:10}}
+                >
+                {resultBooks.length ? 
+                    resultBooks.map(el => {
+                        return (
+                            <View 
+                            style={{flex:1, alignSelf:'center', alignItems: 'center', padding:10}}
+                            key={el.id}>
+                                <Text
+                                style={{alignSelf:'center', flexWrap:'wrap', fontSize:20, color:'#AB1211', fontWeight:'600'}}
+                                >{el.volumeInfo.title}</Text>
+                                <Text
+                                style={{flex:1, alignSelf:'center', flexWrap:'wrap', fontSize:20}}
+                                > by {el.volumeInfo.authors? el.volumeInfo.authors[0] : "unknown"}</Text>
+                                <Image 
+                                style={style.resultImgs}
+                                source={{uri: `${el.volumeInfo.imageLinks.thumbnail}`}}
+                                />
+                            </View>
+                        )
+                    }) 
+                    : 
+                    <View
+                    style={{padding:10}}
+                    >
+                        <Text 
+                        style={{fontSize:18, fontWeight:'500', alignSelf:'center'}}
+                        >"{quote.quote}"</Text>
+                        <Text >- {quote.author}</Text>
+                    </View>
+                }
+                </View>
+            </View>
+        </ScrollView>
     )
 }
 
 const style = StyleSheet.create({
-    container: {flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center'},
+    container: {
+        flex: 1,
+        backgroundColor: '#FFFFEE',
+        alignItems: 'center',
+        justifyContent: 'center'},
     resultImgs: {
         width:180,
-        height: 250
+        height: 250,
+        padding: 5
     }
 })
 
