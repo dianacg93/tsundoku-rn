@@ -6,7 +6,7 @@ import tailwind from "tailwind-rn";
 const BookstoresScreen = () => {
 	return (
 		<ScrollView>
-			<View style={styles.container}>
+			<View style={styles.heading}>
 				<Text style={tailwind("text-2xl text-center uppercase")}>Indie Bookstores in NYC</Text>
 			</View>
 			<View style={styles.centered}>
@@ -80,8 +80,9 @@ const BookstoresScreen = () => {
 };
 
 const styles = StyleSheet.create({
-	container: {
+	heading: {
 		paddingTop: 20,
+		paddingBottom: 20,
 		flex: 1,
 		justifyContent: "center",
 		width: "100%",
@@ -91,6 +92,7 @@ const styles = StyleSheet.create({
 		flex: 1,
 		justifyContent: "center",
 		alignItems: "center",
+		backgroundColor: "#FFFFEE",
 	},
 });
 
