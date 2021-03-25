@@ -4,21 +4,19 @@ import tailwind from 'tailwind-rn';
 
 const ReturnBodyText = () => {
     return (
-        <ScrollView>
             <View style={styles.container}>
-                <Text style={tailwind("text-justify px-10 pl-16 pr-16")}>
-                From relieving stress to improving brain function to increasing empathy, <strong> books are capable of doing a lot more than just entertaining the people who enjoy them </strong>. In fact, reading is the <strong> best workout for your brain </strong>, and it can even <strong> improve your memory </strong>. Sure, unwinding with Netflix at the end of every day is relaxing and all, but regularly reading is good for your mind, body, and soul.
+                <Text style={tailwind("px-10 pl-16 pr-16 pb-10")}>
+                    <Text>
+                    From relieving stress to improving brain function to increasing empathy,  books are capable of doing a lot more than just entertaining the people who enjoy them. In fact, reading is the  best workout for your brain , and it can even  improve your memory . Sure, unwinding with Netflix at the end of every day is relaxing and all, but regularly reading is good for your mind, body, and soul.
+                    </Text>
                 </Text>
-                <br />
-                <Text style={tailwind("text-justify px-10 pl-16 pr-16")}>
-                You may not be able to see it, but <strong>your brain is one of the most important parts of yourself</strong>. Without it and the memories it keeps, you wouldn't be you, let alone remember all of your favorite books.    
-                </Text>
-                <br />
-                <Text style={tailwind("text-justify px-10 pb-10 pl-16 pr-16")}>
-                Luckily, just be reading them, you can help improve your memory and exercise your brain in the most fun and effective way.    
-                </Text>
+                    <Text style={tailwind("px-10 pl-16 pr-16 pb-10")}>
+                    You may not be able to see it, but your brain is one of the most important parts of yourself. Without it and the memories it keeps, you wouldn't be you, let alone remember all of your favorite books.    
+                    </Text>
+                    <Text style={tailwind("px-10 pb-10 pl-16 pr-16")}>
+                    Luckily, just be reading them, you can help improve your memory and exercise your brain in the most fun and effective way.    
+                    </Text>
             </View>
-        </ScrollView>
     );
 };
 
@@ -26,7 +24,7 @@ const ReturnWebStory = () => {
     return (
         <View>
             <View style={styles.storyContainer}>
-                <View style={tailwind("flex flex-col lg:flex-row border-t-2 items-center pt-3 pt-3")}>
+                <View style={tailwind("flex flex-col border-t-2 items-center pt-3 pt-3")}>
                 
                 <Image 
                     source={{
@@ -36,25 +34,33 @@ const ReturnWebStory = () => {
                     />
                 </View>
                 <View  style={styles.centered}>
-                    <Text style={tailwind("lg:w-1/4 p-3 font-bold")}>Why Unread Books Are More Valuable to Our Lives than Read Ones</Text>
-                </View>
-                <View style={styles.storyDescription}>
-                    <Text style={tailwind("text justify w-screen px-10 lg:w-11/12 p-3")}>
-                    The writer Umberto Eco belongs to that small class of scholars who are encyclopedic, insightful, and nondull. He is the owner of a large personal library (containing thirty thousand books) ...
+                    <Text style={tailwind("p-3 pl-16 pr-16 font-bold")}>
+                        <Text>Why Unread Books Are More Valuable to Our Lives than Read Ones</Text>
                     </Text>
                 </View>
-                <Text style={tailwind("text justify w-screen p-3 font-bold text-red-500")}
-                    onPress={() => Linking.openURL("https://www.brainpickings.org/2015/03/24/umberto-eco-antilibrary/")}>
-                    Read More >
+                <View style={styles.storyDescription}>
+                    <Text style={tailwind("px-10 p-3 pl-16 pr-16")}>
+                        <Text>
+                        The writer Umberto Eco belongs to that small class of scholars who are encyclopedic, insightful, and nondull. He is the owner of a large personal library (containing thirty thousand books)...
+                        </Text>
+                    </Text>
+                </View>
+                <Text style={tailwind("p-3 pl-16 font-bold text-red-500")}>
+                    <Text 
+                        onPress={() => Linking.openURL("https://www.brainpickings.org/2015/03/24/umberto-eco-antilibrary/")}>
+                        Read More >
+                    </Text>
                 </Text>
                 <View style={styles.storyAuthor}>
-                    <Text style={tailwind("text-center lg:w-1/4 p-3 border-b ")}>
-                    by Maria Popova
+                    <Text style={tailwind("pb-4")}>
+                        <Text style={tailwind("text-center p-3 border-b ")}>
+                        by Maria Popova
+                        </Text>
                     </Text>
                 </View>
             </View>
             <View style={styles.storyContainer}>
-                <View style={tailwind("flex flex-col lg:flex-row border-t-2 items-center pt-3")}>
+                <View style={tailwind("flex flex-col border-t-2 items-center pt-3")}>
                 <Image 
                     source={{
                         uri: 'https://tsundoku.netlify.app/static/media/2.b4d1c8c9.png',
@@ -63,25 +69,33 @@ const ReturnWebStory = () => {
                     />
                 </View>
                 <View style={styles.centered}>
-                    <Text style={tailwind("lg:w-1/4 p-3 font-bold")}>5 Astonishing Ways Reading Changes Your Brain</Text>
-                </View>
-                <View style={tailwind("text justify w-screen px-10 lg:w-11/12 p-3")}>
-                    <Text>
-                    Since you were a child, you've probably been told to read because "it's good for you." Parents and doctors, teachers and librarians — even me on this very site — have touted the many health and wellness benefits of books, but has anyone every told you ...
+                    <Text style={tailwind("p-3 pl-16 pr-16 font-bold")}>
+                        <Text>5 Astonishing Ways Reading Changes Your Brain</Text>
                     </Text>
                 </View>
-                <Text style={tailwind("text justify w-screen p-3 font-bold text-red-500")}
-                    onPress={() => Linking.openURL("https://www.bustle.com/p/what-does-reading-do-to-your-brain-these-5-effects-are-pretty-astounding-74676")}>
-                    Read More >
+                <View >
+                    <Text style={tailwind("px-10 p-3 pl-16 pr-16")}>
+                        <Text>
+                        Since you were a child, you've probably been told to read because "it's good for you." Parents and doctors, teachers and librarians — even me on this very site — have touted the many health and wellness benefits of books, but has anyone every told you ...
+                        </Text>
+                    </Text>
+                </View>
+                <Text style={tailwind("p-3 pl-16 font-bold text-red-500")}>
+                    <Text 
+                        onPress={() => Linking.openURL("https://www.bustle.com/p/what-does-reading-do-to-your-brain-these-5-effects-are-pretty-astounding-74676")}>
+                        Read More >
+                </Text>
                 </Text>
                 <View style={styles.storyAuthor}>
-                    <Text style={tailwind("text-center lg:w-1/4 p-3 border-b ")}>
-                    by Sadie Trombetta
+                    <Text style={tailwind("pb-4")}>
+                        <Text style={tailwind("text-center p-3 border-b ")}>
+                        by Sadie Trombetta
+                        </Text>
                     </Text>
                 </View>
             </View>
             <View style={styles.storyContainer}>
-                <View style={tailwind("flex flex-col lg:flex-row border-t-2 items-center pt-3")}>
+                <View style={tailwind("flex flex-col border-t-2 items-center pt-3")}>
               <Image 
                     source={{
                         uri: 'https://tsundoku.netlify.app/static/media/3.348bd846.png',
@@ -90,20 +104,28 @@ const ReturnWebStory = () => {
                     />
                 </View>
                 <View style={styles.centered}>
-                    <Text style={tailwind("lg:w-1/4 p-3 font-bold")}>Why Books Are Here to Stay</Text>
-                </View>
-                <View style={tailwind("text justify w-screen px-10 lg:w-11/12 p-3")}>
-                    <Text>
-                    Despite the rise of e-books, physical books aren't going anywhere. Graphic designer Chip Kidd shares why their design is so lasting. The physical object of a book is almost like a person. I mean, it has a spine and it has a backbone. It has a face. Actually ...
+                    <Text style={tailwind("p-3 pl-16 pr-16 font-bold")}>
+                        <Text>Why Books Are Here to Stay</Text>
                     </Text>
                 </View>
-                <Text style={tailwind("text justify w-screen p-3 font-bold text-red-500")}
-                    onPress={() => Linking.openURL("https://www.ted.com/talks/chip_kidd_why_books_are_here_to_stay")}>
-                    Read More >
+                <View >
+                    <Text style={tailwind("px-10 p-3 pl-16 pr-16")}>
+                        <Text>
+                        Despite the rise of e-books, physical books aren't going anywhere. Graphic designer Chip Kidd shares why their design is so lasting. The physical object of a book is almost like a person. I mean, it has a spine and it has a backbone. It has a face. Actually...
+                        </Text>
+                    </Text>
+                </View>
+                <Text style={tailwind("p-3 pl-16 font-bold text-red-500")}>
+                    <Text 
+                        onPress={() => Linking.openURL("https://www.ted.com/talks/chip_kidd_why_books_are_here_to_stay")}>
+                        Read More >
+                    </Text>
                 </Text>
                 <View style={styles.storyAuthor}>
-                    <Text style={tailwind("text-center lg:w-1/4 p-3 border-b ")}>
-                    by Chip Kidd
+                    <Text style={tailwind("pb-20")}>
+                        <Text style={tailwind("text-center p-3 border-b")}>
+                        by Chip Kidd
+                        </Text>
                     </Text>
                 </View>
             </View>
@@ -114,32 +136,41 @@ const ReturnWebStory = () => {
 const MissionScreen = () => {
 
     return (
-        <View style={styles.container}>
-            <View >
-                <Text style={tailwind("text-2xl uppercase font-bold font-headings text-center p-6 pr-10")}>
-                    The Tsundoku Project - Books Are Here To Stay
-                </Text>
-            </View>
-           <hr />
-            <View style={tailwind("p-5 lg:px-20 font-headings")}>
-                <Text style={tailwind("text-2xl uppercase font-bold font-headings text-right p-6 pr-10")}>mission</Text>
-            </View>
-            <View >
-                <Text style={tailwind("font-bold text-3xl pl-6")}>WHY WE BELIEVE</Text>
-                <Text style={tailwind("font-bold text-3xl pl-6")}>IN READING BOOKS</Text>
-            </View>
-            <View>
-                <View style={tailwind("flex flex-col lg:flex-row justify-between items-center pt-4 pb-1 w-full lg:w-3/4")}>
+        <ScrollView>
+            <View style={styles.container}>
+                <View >
                     <Text>
-                        <strong> By Tsundoku Team </strong>
+                        <Text style={tailwind("text-xl uppercase font-bold text-center p-6 pr-10")}>
+                            The Tsundoku Project - Books Are Here To Stay
+                        </Text>
                     </Text>
                 </View>
+                <View style={tailwind("p-5")}>
+                    <Text>
+                        <Text style={tailwind("text-xl uppercase font-bold  text-right p-6 pr-10")}>mission</Text>
+                    </Text>
+                </View>
+                <View >
+                    <Text style={tailwind("pl-8")}>
+                        <Text style={tailwind("font-bold text-2xl text-left")}>WHY WE BELIEVE </Text>
+                        <Text style={tailwind("font-bold text-2xl text-left")}>IN READING BOOKS</Text>
+                    </Text>
+                </View>
+                <View>
+                    <View style={tailwind("flex flex-col justify-between items-center pt-4 pb-1 w-full")}>
+                        <Text>
+                            <Text style={tailwind("font-bold")}>
+                                By Tsundoku Team 
+                            </Text>
+                        </Text>
+                    </View>
+                </View>
+                <View>
+                    <ReturnBodyText />
+                </View>
+                <ReturnWebStory />
             </View>
-            <View>
-                <ReturnBodyText />
-            </View>
-            <ReturnWebStory />
-        </View>
+        </ScrollView>
     );
 };
 
@@ -159,6 +190,10 @@ const styles = StyleSheet.create({
 		justifyContent: "center",
 		alignItems: "center",
 	},
+    storyStyle: {
+        flex: 1,
+        flexDirection: "row",
+    }
 })
 
 
