@@ -1,6 +1,6 @@
 import { createStackNavigator } from "@react-navigation/stack";
 import React from "react";
-import { StyleSheet, Text, View, ScrollView } from "react-native";
+import { StyleSheet, Text, View, ScrollView, Linking } from "react-native";
 import { Image } from "react-native";
 
 const AboutUsScreen = () => {
@@ -30,6 +30,22 @@ const AboutUsScreen = () => {
             seen my favorite genre change many times, and at the moment I find
             myself reading self-help and business books
           </Text>
+          <Text
+            style={styles.hyperlinkStyle1}
+            onPress={() => {
+              Linking.openURL("https://www.linkedin.com/in/dianacgaona/");
+            }}
+          >
+            LinkedIn
+          </Text>
+          <Text
+            style={styles.hyperlinkStyle2}
+            onPress={() => {
+              Linking.openURL("https://github.com/dianacg93");
+            }}
+          >
+            GitHub
+          </Text>
         </View>
 
         <View style={styles.text}>
@@ -48,6 +64,22 @@ const AboutUsScreen = () => {
             by Haruki Murakami called 'Kafka on the Shore'. His works led me to
             one of my favorite genres of literature, Russian, with authors like
             Dostoevsky and Bulgakov.
+          </Text>
+          <Text
+            style={styles.hyperlinkStyle1}
+            onPress={() => {
+              Linking.openURL("https://www.linkedin.com/in/shafeelinks/");
+            }}
+          >
+            LinkedIn
+          </Text>
+          <Text
+            style={styles.hyperlinkStyle2}
+            onPress={() => {
+              Linking.openURL("https://github.com/shafeeshafee");
+            }}
+          >
+            GitHub
           </Text>
         </View>
 
@@ -70,6 +102,22 @@ const AboutUsScreen = () => {
             freetime writing hand-lettered calligraphy cards and letters to
             close friends.
           </Text>
+          <Text
+            style={styles.hyperlinkStyle1}
+            onPress={() => {
+              Linking.openURL("https://www.linkedin.com/in/jahazielbenisrael/");
+            }}
+          >
+            LinkedIn
+          </Text>
+          <Text
+            style={styles.hyperlinkStyle2}
+            onPress={() => {
+              Linking.openURL("https://github.com/blaquebeardcoder");
+            }}
+          >
+            GitHub
+          </Text>
         </View>
 
         <View style={styles.text}>
@@ -89,6 +137,22 @@ const AboutUsScreen = () => {
             a piece of those places because of the fictional memories I have
             there. Books hold insight, so many of things I know about life I
             learned from books. Books have shaped me as a person.
+          </Text>
+          <Text
+            style={styles.hyperlinkStyle1}
+            onPress={() => {
+              Linking.openURL("https://www.linkedin.com/in/ssiddiqui007/");
+            }}
+          >
+            LinkedIn
+          </Text>
+          <Text
+            style={styles.hyperlinkStyle2}
+            onPress={() => {
+              Linking.openURL("https://github.com/shansiddiqui94");
+            }}
+          >
+            GitHub
           </Text>
         </View>
       </ScrollView>
@@ -139,6 +203,15 @@ const styles = StyleSheet.create({
     fontSize: 15,
     fontWeight: "bold",
     paddingBottom: 12,
+  },
+  hyperlinkStyle1: {
+    flex: 1,
+    fontSize: 15,
+    paddingBottom: 10,
+  },
+  hyperlinkStyle2: {
+    flex: 1,
+    fontSize: 15,
   },
 });
 
